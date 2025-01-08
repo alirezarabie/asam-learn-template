@@ -151,6 +151,19 @@ a {
   list-style: none;
 }
 
+.navbar-overlay {
+  display: none;
+}
+
+.navbar-overlay.open {
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
 .navbar-links ul {
   padding: 0;
   list-style-type: none;

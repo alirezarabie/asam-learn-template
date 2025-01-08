@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/img/favicon.png" rel="icon" />
-    <link rel="stylesheet" href="/css/style.css" />
     <title>asam template</title>
   </head>
 
@@ -91,6 +90,12 @@
 
       <!-- Start navbar -->
       <div class="navbar-background">
+        <div
+          id="navbar-overlay"
+          class="navbar-overlay"
+          onclick="closeMenu()"
+        ></div>
+
         <div class="wrapper">
           <div class="navbar">
             <div id="icon-menu" class="icon-menu" onclick="openMenu()">
@@ -2005,10 +2010,18 @@
     </script>
     <script type="module" src="/src/main.js"></script>
     <script>
+      var links = document.getElementById("navbar-links");
+      var menuButton = document.getElementById("icon-menu");
+      var navbarOverlay = document.getElementById("navbar-overlay");
+
       function openMenu() {
-        var links = document.getElementById("navbar-links");
-        var menuButton = document.getElementById("icon-menu");
         links.classList.toggle("open");
+        navbarOverlay.classList.toggle("open");
+      }
+
+      function closeMenu() {
+        links.classList.remove("open");
+        navbarOverlay.classList.remove("open");
       }
     </script>
   </body>
