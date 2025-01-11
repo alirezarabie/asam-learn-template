@@ -6,8 +6,9 @@ const arrowButton = document.querySelectorAll(".dropdown-menu");
 
 arrowButton.forEach((el) =>
   el.addEventListener("click", (event) => {
-    console.log(event.target);
-    const subMenu = event.target.parentElement.querySelector(".navbar-submenu");
+    const subMenu = event.target
+      .closest(".dropdown-menu")
+      .querySelector(".navbar-submenu");
     subMenu.classList.toggle("open");
   })
 );
