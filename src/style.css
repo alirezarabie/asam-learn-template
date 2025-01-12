@@ -203,11 +203,10 @@ img {
 }
 
 .navbar-links {
-  display: none;
   position: fixed;
   background-color: #1fbbb7;
   top: 0;
-  right: 0;
+  right: -20rem;
   padding-top: 7rem;
 }
 
@@ -239,6 +238,8 @@ img {
 
 .navbar-links.open {
   display: block;
+  right: 0;
+  transition: 0.5s;
   height: 100vh;
   width: 20rem;
 }
@@ -327,6 +328,7 @@ img {
     text-align: right;
     width: 9rem;
     transform: translate(0, -1rem);
+    transition: 0.5s;
   }
 
   .navbar-submenu a {

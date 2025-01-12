@@ -12,6 +12,7 @@ arrowButton.forEach((el) =>
     subMenu.classList.toggle("open");
   })
 );
+
 function openMenu() {
   links.classList.toggle("open");
   navbarOverlay.classList.toggle("open");
